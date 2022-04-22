@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<label for="input">Число:</label>
+<input name="input" type="number" id="col" value="1">
+<button id="buy">Купить</button>
+<button id="plus">+</button>
+<button id="minus">-</button>
+
+<script>
+let col = document.getElementById('col');
+let plus = document.getElementById('plus');
+let minus = document.getElementById('minus');
+
+plus.onclick = function() {
+  col.value = parseInt(col.value) + 1;
+}
+
+minus.onclick = function() {
+  col.value = parseInt(col.value) - 1;
+}
+</script>
+
+</body>
+</html>

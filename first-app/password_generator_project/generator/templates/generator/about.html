@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+
+
+    <h2 class="title">Правила создания пароля</h2>
+    <p class="disc">{{ post }}</p><br>
+    <h4>Автор: {{ author }}</h4>
+    <p><a class="x" href="{% url 'home' %}">Вернуться на главную страницу</a></p>
+</div>
+</body>
+</html>

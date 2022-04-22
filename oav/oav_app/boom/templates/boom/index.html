@@ -1,0 +1,45 @@
+{% extends 'boom/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1 class="title">ROSSVIK</h1>
+<div class="block">
+    {% for bo in boo %}
+    <div class="title">{{ bo.title }}</div>
+    <div class="cart">
+
+        <div class="general">
+            <div class="img"><img src="{{ bo.image.url }}" alt=""></div>
+            <div class="set">
+
+                <div class="article">Артикул: {{ bo.articles }}</div>
+                <div class="rating"><img src="{{ bo.rating.url }}" alt=""></div>
+                <div class="disc">{{ bo.description }}</div>
+
+            </div>
+
+        </div>
+
+        <div class="basket">
+            <div class="price_block">
+                <span class="price">{{ bo.price }} <span class="rub">руб.</span></span><span class="sh"> за шт.</span>
+            </div>
+            <p><input type="checkbox" class="check"></p>
+            <form action="#" method="post">
+                <input class="bot" type="submit" name="submit" value="В КОРЗИНУ">
+            </form>
+            <div class="img2"><img src="{{ bo.image2.url }}" alt=""></div>
+        </div>
+        <p class="bot2"><input type="submit" value="ОПИСАНИЕ" class="bot"></p>
+        <div class="disc2">{{ bo.description_full }}</div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}

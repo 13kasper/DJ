@@ -1,0 +1,107 @@
+body{
+    background:#fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.menu{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+.content{
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.general{
+    width: 70%;
+
+}
+.title{
+    margin-bottom: 20px;
+    color: #349933;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.img{
+    float: left;
+}
+.img img{
+    width: 390px;
+}
+
+.rating img{
+    height: 20px;
+}
+
+.set{
+    margin: 10px 20px;
+    float: left;
+}
+.disc{
+    width: 135px;
+}
+
+.basket{
+    float: left;
+    width: 300px;
+    background: rgb(241, 241, 241);
+    text-align: center;
+}
+
+.img2 img{
+    height: 60px;
+    width: 250px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+}
+.price .rub{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.price_block{
+    margin: 30px 0;
+}
+
+.bot{
+    height: 40px;
+    background: #349933;
+    width: 250px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.bot2{
+    display: block;
+    clear: both;
+}
+
+.disc2{
+    width: 70%;
+    font-size: 16px;
+    font-weight: 500;
+}

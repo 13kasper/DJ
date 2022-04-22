@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+{% if user.is_authenticated %}
+<div class="menu">
+    <div class="wrap">
+        <ul>
+            <li class="log">Пользователь: {{ user.username }}</li>
+            <li><a href="{% url 'createtodo' %}">Создать</a></li>
+            <li><a href="{% url 'currenttodos' %}">Актуальные записи</a></li>
+            <li>
+                <form action="{% url 'logoutuser' %}" method="POST">
+                        {% csrf_token %}
+                    <button class="top">Выйти</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% else %}
+
+<div class="menu">
+        <div class="wrap">
+            <ul>
+                <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
+                <li><a href="{% url 'loginuser' %}">Войти</a></li>
+            </ul>
+            {% endif %}
+    </div>
+</div>
+
+<div class="content">
+    <div class="wrap">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</div>
+
+</body>
+</html>

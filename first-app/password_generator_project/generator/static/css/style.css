@@ -1,0 +1,44 @@
+body{
+    background: #778899;
+    font-family: Verdana;
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.container p{
+    color: #fff;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.container form, .container h2{
+    background: #2F4F4F;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.container .disc{
+    margin-top: 20px;
+    background: #2F4F4F;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.container .title{
+    margin-top: 100px;
+    background: #2F4F4F;
+    text-align: center;
+    color: #fff;
+}
+
+.container a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
