@@ -1,0 +1,10 @@
+{% extends 'boom/base.html' %}
+{% block content %}
+<h1>Регистрация</h1>
+<form method="post" class="register">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <button class="btn">Зарегистрироваться</button>
+</form>
+
+{% endblock %}

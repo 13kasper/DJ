@@ -22,6 +22,14 @@ from boom import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+
+    # Auth
+    path('signup/', views.signupuser, name='signupuser'),
+    path('logout/', views.logoutuser, name="logoutuser"),
+    path('login/', views.loginuser, name="loginuser"),
+
+    # OAV
+    path('current/', views.currentboom, name='currentboom'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
