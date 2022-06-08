@@ -4,46 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style .css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body background="{% static 'todo/1.jpg' %}">
 
 {% if user.is_authenticated %}
 <div class="menu">
     <div class="wrap">
         <ul>
             <li class="log">Пользователь: {{ user.username }}</li>
-            <li><a href="{% url 'createtodo' %}">Создать</a></li>
-            <li><a href="{% url 'currenttodos' %}">Актуальные записи</a></li>
-            <li>
-                <form action="{% url 'logoutuser' %}" method="POST">
-                        {% csrf_token %}
-                    <button class="top">Выйти</button>
-                </form>
-            </li>
+            <li><a href="{% url 'createdtodo' %}">Добавить фильм</a></li>
+            <li><a href="{% url 'currenttodos' %}">Фильмотека</a></li>
+            <li><a href="{% url 'completedtodos' %}">Просмотренные</a></li>
+            <form action="{% url 'logoutuser' %}" method="POST">
+                {% csrf_token %}
+                <button class="top">выйти</button>
+            </form>
         </ul>
+    </div>
     </div>
 </div>
 
 {% else %}
 
 <div class="menu">
-        <div class="wrap">
+    <div class="wrap">
             <ul>
+                <li class="logo"><a href="{% url 'home' %}">Films-TOP</a></li>
                 <li><a href="{% url 'signupuser' %}">Зарегистрироваться</a></li>
                 <li><a href="{% url 'loginuser' %}">Войти</a></li>
             </ul>
-            {% endif %}
     </div>
 </div>
+        {% endif %}
 
 <div class="content">
     <div class="wrap">
         {% block content %}
         {% endblock %}
     </div>
-
 </div>
-
 </body>
 </html>

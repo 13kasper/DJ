@@ -1,0 +1,65 @@
+{% extends 'ads/base.html' %}
+
+{% load static %}
+{% load thumbnail %}
+
+{% block content %}
+
+
+<div class="card mb-3" style="max-width: 1100px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+        {% if ads.photo %}
+              <img src="{{ ads.photo.url }}" class="img-fluid rounded-start" alt="...">
+        {% endif %}
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ ads.title }}</h5>
+        <p class="card-text">{{ ads.content|safe}}</p>
+          <li class="list-group-item li-price-btn">Цена - {{ ads.price }} р.</li>
+
+        <a href="#" class="btn price">Купить</a>
+        <p class="card-text data"><small class="text-muted">Дата публикации: {{ ads.time_update|date:"d-m-Y H:i:s" }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card miniature" style="width: 6rem;">
+    {% for p in gh %}
+
+    {% if title == p.product %}
+                <img class="rounded img-thumbnail"  src="{{ p.images.url }}" alt="" >
+    {% endif %}
+    {% endfor %}
+</div>
+
+<p>Комментарии</p>
+
+<hr>
+
+<p>Добавить комментарий</p>
+
+
+{% if messages %}
+<div class="alert alert-success">
+    {% for m in messages %}
+        {{ m }}
+    {% endfor %}
+    </div>
+    {% endif %}
+
+
+<div class="col-4">
+    <form action="" id="add_form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+        <button form="add_form" type="submit" class="btn btn-secondary">Добавить</button>
+</div>
+
+
+
+
+{% endblock %}

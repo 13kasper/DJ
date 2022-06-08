@@ -13,6 +13,12 @@ class Boom(models.Model):
     image2 = models.ImageField(upload_to='booms/images/', default='')  # upload_to = путь к папке изображений
     url = models.URLField(blank=True)  # blank=True -- отменяет обязательное заполнение
 
+    def __str__(self):
+        return self.title
+
 
 class Menus(models.Model):
     link = models.CharField(max_length=20)
+
+
+

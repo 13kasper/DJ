@@ -1,0 +1,35 @@
+{% extends  'base.html' %}
+
+{% block content %}
+
+<div class="wrap">
+
+    <div class="block">
+        <div class="elem">
+            <h2>Погода в вашем городе</h2>
+            <form action="">
+                <input type="text" name="city" placeholder="Введите город" class="city">
+                <br>
+                <input type="submit" name="send" value="Узнать" class="but" >
+            </form>
+        </div>
+        <div class="elem">
+            <h2>Информация</h2>
+
+            {% for info in all_info %}
+
+                    <div class="info">
+                        <p class="data">
+                            <b>Город</b> {{ info.city }}<br><br>
+                            <b>Температура:</b>{{ info.temp }}<small><sup>o</sup></small>
+                        </p>
+                        <p><img src="{{ info.icon }}" alt=""></p>
+                    </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

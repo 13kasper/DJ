@@ -3,6 +3,6 @@ from .models import Todo
 
 
 class TodoForm(ModelForm):
-    class Meta:  # обычно дополняется служебная информация
+    class Meta:
         model = Todo
         fields = ['title', 'memo', 'important']

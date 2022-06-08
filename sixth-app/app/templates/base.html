@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Конвертер валют</a></li>
+            <li><a href="{% url 'weather' %}">Погода</a></li>
+        </ul>
+    </div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

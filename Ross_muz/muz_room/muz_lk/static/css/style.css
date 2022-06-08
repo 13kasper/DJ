@@ -1,0 +1,8 @@
+.song{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.name{
+    margin-right: 50px;
+}

@@ -1,0 +1,317 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*background: #588157;*/
+    font-family: 'Oswald', sans-serif;
+}
+
+.wrap{
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+.content .wrap{
+
+    /*background: #A3B18A;*/
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a{
+    text-decoration: none !important;
+    color: #6c757d;
+}
+
+a:hover{
+    color: #f95738;
+}
+
+.mainmenu{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main h1{
+    padding-bottom: 20px;
+        font-size: 2rem;
+}
+
+.header{
+    background: #6c757d;
+            margin: 0 auto;
+}
+.last{
+    color: #FFC;
+}
+
+.dropdown{
+    width: 320px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+/*.main li{
+    border: 1px solid #FFC;
+    margin-bottom: 40px;
+}*/
+
+.first, .date{
+    padding: 10px 20px;
+    background: #264b26;
+    font-size: 18px;
+    color: #FFC;
+    margin: 0;
+}
+.image{
+    margin-right: 20px;
+    max-width: 50%;
+}
+
+.img-fluid.rounded-start{
+    padding:2px;
+    box-sizing: border-box;
+}
+
+.photo{
+    max-width: 100%;
+}
+
+.text{
+    padding: 20px 20px 0;
+}
+
+.text h2{
+    margin-top: 0;
+}
+
+.text a{
+    padding-left: 0;
+}
+
+.text a:hover{
+    color: #264b26;
+}
+
+.post{
+    font-size: 18px;
+}
+
+/*.form-input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button{
+    background:  #264b26;
+    border: 2px solid #FFC;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+}*/
+
+label{
+    font-size: 18px;
+}
+
+/*.list-pages{
+    display: flex;
+    justify-content: center;
+}
+
+.list-pages .page-num-selected{
+    background: #264b26;
+    padding: 20px;
+}
+
+.list-pages a{
+    background: #588157;
+    padding: 20px;
+    display: block;
+    color: #FFC;
+}*/
+
+/*.page-num{
+    margin: 6px;
+    font-weight: bold;
+}
+
+input, textarea{
+    width: 100%
+    margin-top: 6px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+button{
+    background: #264b26;
+    color: #FFC;
+    padding: 10px 40px;
+    font-size: 20px;
+}*/
+
+#id_is_published{
+    width: 20px;
+    height: 20px;
+}
+
+#id_cat{
+    font-size: 20px;
+    padding: 4px;
+}
+
+.last a{
+    display: inline;
+}
+
+.logout{
+    margin-bottom: 40px;
+}
+
+.logout a{
+    font-size: 20px;
+    color: #264b5d;
+    background: #81d4fa;
+    padding: 20px 86px;
+    font-weight: bold;
+}
+
+/*.table{
+    border-collapse: collapse;
+    border: 1px solid gray;
+    width: 100%;
+}*/
+th {
+    border: 1px solid grey;
+    width: 10%;
+ }
+ td {
+    border: 1px solid grey;
+ }
+ th, td {
+    padding: 10px 15px;
+ }
+
+ .nav-link{
+    display: inline-block;
+    background-color: #b23a48;
+ }
+ .nav-item{
+    padding-bottom: 10px;
+ }
+ .nav-pills{
+     padding: 20px;
+     justify-content: end;
+     padding-top: 30px;
+    box-sizing: border-box;
+ }
+
+.logos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    float: left;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+.logo-a{
+    padding:0;
+    font-weight: bold;
+    font-size: 24px;
+        color: #fff;
+}
+
+.logo-a a{
+    color: #fff;
+}
+
+.disc{
+    color: #FFF;
+    font-size: 16px;
+}
+.list-group-item-secondary{
+    border: 0.1px solid #e5e4e4;
+}
+.li-act{
+    padding: 5px 0px 5px 15px;
+}
+
+.name{
+    color: #FFF;
+}
+.miniature{
+    flex-direction: row;
+}
+.btn.price{
+    background-color: #6c757d;
+    width: 150px;
+    color: #FFF;
+    margin-bottom: 200px
+}
+.list-group-item.li-price-btn{
+    margin-bottom:20px;
+    width: 150px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.card-text{
+    color: #6c757d;
+}
+
+.card-text.data{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+.card-text.li-price-btn{
+    border: 1px solid #6c757d;
+    font-weight: bold;
+}
+
+.view-detail{
+    width: 200px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    background-color: #6c757d;
+}
+
+.view-detail a{
+    color: #fff;
+}
+
+.pagination a{
+    color: #6c757d;
+}
+
+input[name="photo"]{
+    border: none;
+}
+input[name="images"]{
+    border: none;
+}
+.btn.btn-secondary{
+    width: 250px;
+    margin-top: 20px;
+}
+
+.card{
+    background-color: #f9f9f9;
+}
